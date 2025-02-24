@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #C70039;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #C70039;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #FF5733;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Car Price Predictor</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <h2>Predict the Price of Your Car</h2>
+
+        <!-- Car Prediction Form -->
+        <form id="carForm">
+            <div class="form-group">
+                <label for="make">Car Make</label>
+                <select id="make" required>
+                    <option value="">Select Make</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Ford">Ford</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Audi">Audi</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="model">Car Model</label>
+                <input type="text" id="model" placeholder="Enter Model" required>
+            </div>
+
+            <div class="form-group">
+                <label for="year">Manufacture Year</label>
+                <input type="number" id="year" placeholder="Enter Year" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mileage">Mileage (in km)</label>
+                <input type="number" id="mileage" placeholder="Enter Mileage" required>
+            </div>
+
+            <!-- New Inputs -->
+            <div class="form-group">
+                <label for="condition">Car Condition</label>
+                <select id="condition" required>
+                    <option value="">Select Condition</option>
+                    <option value="new">New</option>
+                    <option value="used">Used</option>
+                    <option value="certified">Certified Pre-Owned</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fuel">Fuel Type</label>
+                <select id="fuel" required>
+                    <option value="">Select Fuel Type</option>
+                    <option value="petrol">Petrol</option>
+                    <option value="diesel">Diesel</option>
+                    <option value="electric">Electric</option>
+                    <option value="hybrid">Hybrid</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="transmission">Transmission Type</label>
+                <select id="transmission" required>
+                    <option value="">Select Transmission Type</option>
+                    <option value="manual">Manual</option>
+                    <option value="automatic">Automatic</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Enter your location" required>
+            </div>
+
+            <button type="submit">Predict Price</button>
+        </form>
+
+        <!-- Result Section -->
+        <div id="result" class="result"></div>
+    </div>
+
+</body>
+</html>
